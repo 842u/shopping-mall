@@ -16,6 +16,40 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Dorsa', sans-serif;
+  text-shadow: 2px 2px 1px black;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: lighter;
+  color: aqua;
+  font-family: 'Neonderthaw', cursive;
+  filter: drop-shadow(0 0 10px var(--color-neon-1));
+  text-shadow: 0 0 2px black;
+}
+
+h2 {
+  font-size: 8rem;
+  padding: 5rem;
+  letter-spacing: 1rem;
+  word-spacing: 2rem;
+  color: antiquewhite;
+}
+
+p {
+  font-size: 4rem;
+  letter-spacing: 0.5rem;
+  word-spacing: 0.6rem;
+  font-weight: bold;
+  padding: 10rem;
+  color: antiquewhite;
+}
+
+section {
+  scroll-margin-top: 10rem;
+  text-align: center;
+  height: 100vh;
 }
 
 
@@ -35,7 +69,7 @@ html {
   width: 100%;
   height: 100%;
   background: no-repeat center center;
-  background-image: url('img/background-6.jpeg');
+  background-image: url('img/background-main.jpeg');
   background-size: cover;
 }
 
@@ -66,16 +100,7 @@ header {
   filter: drop-shadow(0 0 10px var(--color-neon-3));
 }
 
-h1 {
-  font-size: 6rem;
-  font-weight: lighter;
-  color: aqua;
-  font-family: 'Neonderthaw', cursive;
-  filter: drop-shadow(0 0 10px var(--color-neon-1));
-}
-
 nav ul {
-  font-family: 'Dorsa', sans-serif;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -97,9 +122,6 @@ nav a:hover {
 }
 
 nav a:active {
-  text-decoration: none;
   color: var(--color-neon-3);
-  font-size: 7rem;
-  padding: 2rem;
   filter: drop-shadow(0 0 20px var(--color-neon-1));
 }
