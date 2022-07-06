@@ -1,6 +1,9 @@
 /* GENERAL */
 :root {
   --color-text: #fff;
+  --color-neon-1: #00FFFF;
+  --color-neon-2: #FDBEF6;
+  --color-neon-3: #CC39C7;
 }
 
 * {
@@ -11,20 +14,12 @@
   color: var(--color-text);
 }
 
-/* BACKGROUND */
-/*    blured borders problem    */
-/* .bg-img {
-  position: absolute;
-  z-index: -1;
-  height: 100%;
-  width: 100%; 
-  background: url("img/background-10.jpeg") no-repeat center center fixed; 
-  background-size: cover;
-  backdrop-filter: blur(10px);
-  filter: blur(6px) contrast(120%);
-  box-shadow: 0 0 5px 20px #333;
-} */
+html {
+  scroll-behavior: smooth;
+}
 
+
+/* BACKGROUND */
 .bg-img::after {
   content: "";
   position: absolute;
@@ -35,11 +30,76 @@
 }
 
 .bg-img {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   width: 100%;
   height: 100%;
   background: no-repeat center center;
   background-image: url('img/background-6.jpeg');
   background-size: cover;
+}
+
+
+/* NAV BAR */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(100px);
+  display: flex;
+  justify-content: space-between;
+  height: 10rem;
+  width: 100%;
+  align-items: center;
+  padding: 3rem;
+}
+
+.container-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  user-select: none;
+}
+
+.icon-flamingo {
+  height: 8rem;
+  filter: drop-shadow(0 0 10px var(--color-neon-3));
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: lighter;
+  color: aqua;
+  font-family: 'Neonderthaw', cursive;
+  filter: drop-shadow(0 0 10px var(--color-neon-1));
+}
+
+nav ul {
+  font-family: 'Dorsa', sans-serif;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-neon-2);
+  font-size: 7rem;
+  padding: 2rem;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: var(--color-neon-2);
+  font-size: 7rem;
+  padding: 2rem;
+  filter: drop-shadow(0 0 10px var(--color-neon-1));
+}
+
+nav a:active {
+  text-decoration: none;
+  color: var(--color-neon-3);
+  font-size: 7rem;
+  padding: 2rem;
+  filter: drop-shadow(0 0 20px var(--color-neon-1));
 }
