@@ -126,7 +126,11 @@ html {
   text-align: center;
 }
 
-.main__header {
+.section {
+  scroll-margin-top: calc(15rem + 5vh);
+}
+
+.section__header {
   width: 100%;
   margin: 5vh 0;
   
@@ -143,8 +147,9 @@ html {
   0 0 5px black;
 }
 
-.main__desc {
+.section__desc {
   margin: 3rem auto;
+
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 0.5rem;
@@ -159,17 +164,13 @@ html {
   0 0 5px black;
 }
 
-.main__home {
-  scroll-margin-top: calc(15rem + 5vh);
-}
-
-.main__home .main__content {
+.section_home .section__content {
   overflow: hidden;
   padding: 0 1rem 0 1rem;
   width: 100%;
 }
 
-.main__home .main__video {
+.section_home .section__video {
   aspect-ratio: 16/9;
   width: 100%;
   max-width: 560px;
