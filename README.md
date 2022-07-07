@@ -1,3 +1,5 @@
-# Shopping Mall
+# Shopping Mall Website
 
-You can come in and just chill out. Simple site made using only HTML and CSS.
+Simple site made using only HTML and CSS.
+
+First approach to mobile-first design and BEM naming convention.
