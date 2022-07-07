@@ -12,37 +12,50 @@
 </head>
 <body>
   <div class="bg-img" aria-hidden="true"></div>
-  <header class="app-nav">
-    <div class="app-nav__logo">
-      <img class="app-nav__img" src="./img/icon-flamingo.svg" alt="Shopping Mall Logo.">
-      <h1 class="app-nav__txt">Shopping Mall</h1>
+  <header class="nav">
+    <div class="logo">
+      <img class="logo__img" src="./img/icon-flamingo.svg" alt="Shopping Mall Logo.">
+      <h1 class="logo__txt">Shopping Mall</h1>
     </div>
     <nav>
-      <ul>
-        <li><a href="#section-home">Home</a></li>
-        <li><a href="#section-shops">Shops</a></li>
-        <li><a href="#section-map">Map</a></li>
-        <li><a href="#section-contact">Contact</a></li>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#home">Home</a></li>
+        <li><a class="nav__link" href="#shops">Shops</a></li>
+        <li><a class="nav__link" href="#map">Map</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="section-home">
-      <h2>Welcome to the Shopping Mall.</h2>
-      <p>Come in, take a walk or just sit and chill out. For a better experience play our Shopping Mall playlist right below.</p>
+  <main class="main">
+    <section class="main__home" id="home">
+      <h2 class="main__header">Welcome to the Shopping Mall.</h2>
+      <p class="main__desc">Come in, take a walk or just sit and chill out. For a better experience play our Shopping Mall playlist right below.</p>
+      <div class="main__content">
+        <iframe class="main__video" width="560"
+        height="315"
+        src="https://www.youtube.com/embed/UedTcufyrHc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      </div>
     </section>
-
-    <section id="section-shops">
-      <h2>Shops</h2>
+    
+    <section class="main__shops" id="shops">
+      <h2 class="main__header">Shops</h2>
+      <p class="main__desc">Lorem ipsum dolor sit amet.</p>
+      <div class="main__content"></div>
     </section>
-
-    <section id="section-map">
-      <h2>Map</h2>
+    
+    <section class="main__maps" id="map">
+      <h2 class="main__header">Map</h2>
+      <p class="main__desc">Lorem ipsum dolor sit amet.</p>
+      <div class="main__content"></div>
     </section>
   </main>
 
-  <footer id="section-contact">
+  <footer id="contact">
     <p>You can find our Shopping Mall here and only here but you can contact 842u an author of this page here:</p>
     <address>
       <a href="mailto:kamil.bazanow@gmail.com">kamil.bazanow@gmail.com</a><br>
