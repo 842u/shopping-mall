@@ -1,6 +1,7 @@
 /* ==================================================
   [Table of contents]
 
+  --- 320px to 425px ---
   1. GENERAL
     1.1 BACGROUND
   2. NAVBAR
@@ -9,6 +10,8 @@
     3.2 SECTION SHOPS
     3.3 SECTION MAP
   4. FOOTER
+
+  --- 425px to 600px ---
 
   ==================================================*/
 
@@ -88,9 +91,8 @@ html {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: space-around ;
   width: 100vw;
-  height: 15rem;
+  height: 16rem;
 
   backdrop-filter: blur(var(--blur-elements));
 }
@@ -99,13 +101,12 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 1.5rem 0;
   
   list-style: none;
 }
 
 .nav__link {
-  padding: 1rem;
+  /* padding: 1rem; */
 
   font-size: 6rem;
   color: var(--color-neon-2);
@@ -127,8 +128,7 @@ html {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100%;
-  margin: auto;
+  height: 50%;
 }
 
 .logo__img {
@@ -371,4 +371,16 @@ html {
 .fa-solid {
   font-size: 3rem;
   padding-right: 1rem;
+}
+
+@media screen and (min-width: 426px) {
+  .logo__img {
+    max-height: 80%;
+    display: inline-block;
+    filter: drop-shadow(0 0 2px var(--color-neon-6));
+  }
+
+  .card {
+    width: 16rem;
+  }
 }
