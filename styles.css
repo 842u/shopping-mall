@@ -106,8 +106,6 @@ html {
 }
 
 .nav__link {
-  /* padding: 1rem; */
-
   font-size: 6rem;
   color: var(--color-neon-2);
   text-decoration: none;
@@ -125,9 +123,10 @@ html {
 .logo {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  flex-wrap: nowrap;
+  align-content: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
   height: 50%;
 }
 
@@ -215,13 +214,14 @@ html {
 }
 
 .card {
+  aspect-ratio: 1 / 1.5;
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   width: 20rem;
-  height: 27rem;
+  height: auto;
   margin: 1rem;
 
   background-color: var(--color-text);
@@ -377,10 +377,44 @@ html {
   .logo__img {
     max-height: 80%;
     display: inline-block;
+    align-self: center;
     filter: drop-shadow(0 0 2px var(--color-neon-6));
   }
 
   .card {
     width: 16rem;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .nav {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10rem;
+  }
+
+  .logo {
+    width: 45%;
+  }
+
+  .nav__link {
+    margin: 2rem;
+  }
+
+  .card {
+    aspect-ratio: 1 / 1.5;
+    width: 22rem;
+  }
+
+  .footer__address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem;
+  }
+
+  .footer__link {
+    font-size: 3rem;
   }
 }
