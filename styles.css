@@ -1,14 +1,39 @@
-/*  ==========
-    1. GENERAL
-    ========== */
+/* ==================================================
+  [Table of contents]
+
+  1. GENERAL
+    1.1 BACGROUND
+  2. NAVBAR
+  3. MAIN
+    3.1 SECTION HOME
+    3.2 SECTION SHOPS
+    3.3 SECTION MAP
+  4. FOOTER
+  
+  ==================================================*/
+
+/* ==========
+  1. GENERAL
+  ========== */
 :root {
   --color-text: antiquewhite;
   --color-neon-1: #00FFFF;
   --color-neon-2: #FDBEF6;
   --color-neon-3: #CC39C7;
   --color-neon-4: #138882;
+  --color-neon-5: #DEDC88;
+  --color-neon-6: #FFFF1A;
+
   --blur-background: 0.5rem;
   --blur-elements: 10rem;
+
+  --shadow-contrast: 0 0 5px black,
+  0 0 5px black,
+  0 0 5px black,
+  0 0 5px black,
+  0 0 5px black,
+  0 0 5px black,
+  0 0 5px black;
 }
 
 * {
@@ -27,9 +52,9 @@ html {
   text-shadow: 2px 2px 1px black;
 }
 
-/*  ==========
-    1.1 BACKGROUND
-    ========== */
+/* ==========
+  1.1 BACKGROUND
+  ========== */
 .bg-img::after {
   content: "";
   pointer-events: none;
@@ -52,9 +77,9 @@ html {
   background-size: cover;
 }
 
-/*  ==========
-    2. NAVBAR
-    ========== */
+/* ==========
+  2. NAVBAR
+  ========== */
 .nav {
   position: sticky;
   z-index: 1;
@@ -119,9 +144,9 @@ html {
   text-shadow: 0 0 4px black;
 }
 
-/*  ==========
-    3. MAIN
-    ========== */
+/* ==========
+  3. MAIN
+  ========== */
 .main {
   max-width: 100rem;
   margin: auto;
@@ -144,13 +169,7 @@ html {
   word-spacing: 0.5rem;
   color: var(--color-neon-2);
 
-  text-shadow: 0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black;
+  text-shadow: var(--shadow-contrast);
 }
 
 .section__desc {
@@ -161,44 +180,38 @@ html {
   letter-spacing: 0.5rem;
   word-spacing: 0.5rem;
 
-  text-shadow: 0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black,
-  0 0 5px black;
+  text-shadow: var(--shadow-contrast);
 }
 
-/*  ==========
-    3.1 SECTION HOME
-    ========== */
-.section_home .section__content {
-  overflow: hidden;
-  width: 100%;
+.section__content {
+  padding: 1rem;
+
+  border-radius: 1rem;
+  backdrop-filter: blur(var(--blur-elements));
 }
 
+/* ==========
+  3.1 SECTION HOME
+  ========== */
 .section_home .section__video {
   aspect-ratio: 16 / 9;
   width: 100%;
   max-width: 560px;
   height: auto;
+
+  border: none;
 }
 
-/*  ==========
-    3.2 SECTION SHOPS
-    ========== */
+/* ==========
+  3.2 SECTION SHOPS
+  ========== */
 .section_shops .section__content {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
   padding: 1rem;
-
-  border-radius: 1rem;
-  backdrop-filter: blur(var(--blur-elements));
 }
 
 .card {
@@ -229,4 +242,89 @@ html {
   padding: 1rem;
 
   font-size: 5rem;
+
+  text-shadow: var(--shadow-contrast);
+}
+
+/* ==========
+  3.3 SECTION MAP
+  ========== */
+.section_map .section__content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  height: 50vh;
+}
+
+.map {
+  display: grid;
+  width: 100%;
+}
+
+.map__shop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--color-text);
+}
+
+.map__index {
+  font-size: 7rem;
+
+  text-shadow: var(--shadow-contrast);
+}
+
+.map__shop:first-child {
+  content: "";
+
+  grid-column: 1 / 10;
+  grid-row: 1 / 10;
+
+  border: none;
+}
+
+.map__shop:nth-child(2) {
+  content: "Shop 1";
+
+  grid-column: 2 / 4;
+  grid-row: 4;
+
+  background-color: var(--color-neon-1);
+}
+
+.map__shop:nth-child(3) {
+  grid-column: 6 / 8;
+  grid-row: 3 / 6;
+
+  background-color: var(--color-neon-6);
+}
+
+.map__shop:nth-child(4) {
+  grid-column: 3 / 7;
+  grid-row: 2 / 4;
+
+  background-color: var(--color-neon-2);
+}
+
+.map__shop:nth-child(5) {
+  grid-column: 8;
+  grid-row: 4 / 9;
+
+  background-color: var(--color-neon-4);
+}
+
+.map__shop:nth-child(6) {
+  grid-column: 3 / 8;
+  grid-row: 8;
+
+  background-color: var(--color-neon-5);
+}
+
+.map__shop:nth-child(7) {
+  grid-column: 2 / 4;
+  grid-row: 6 / 9;
+
+  background-color: var(--color-neon-3);
 }
