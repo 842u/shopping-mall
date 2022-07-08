@@ -9,12 +9,12 @@
     3.2 SECTION SHOPS
     3.3 SECTION MAP
   4. FOOTER
-  
+
   ==================================================*/
 
 /* ==========
-  1. GENERAL
-  ========== */
+1. GENERAL
+========== */
 :root {
   --color-text: antiquewhite;
   --color-neon-1: #00FFFF;
@@ -53,8 +53,8 @@ html {
 }
 
 /* ==========
-  1.1 BACKGROUND
-  ========== */
+1.1 BACKGROUND
+========== */
 .bg-img::after {
   content: "";
   pointer-events: none;
@@ -78,8 +78,8 @@ html {
 }
 
 /* ==========
-  2. NAVBAR
-  ========== */
+2. NAVBAR
+========== */
 .nav {
   position: sticky;
   z-index: 1;
@@ -145,8 +145,8 @@ html {
 }
 
 /* ==========
-  3. MAIN
-  ========== */
+3. MAIN
+========== */
 .main {
   max-width: 100rem;
   margin: auto;
@@ -191,8 +191,8 @@ html {
 }
 
 /* ==========
-  3.1 SECTION HOME
-  ========== */
+3.1 SECTION HOME
+========== */
 .section_home .section__video {
   aspect-ratio: 16 / 9;
   width: 100%;
@@ -203,8 +203,8 @@ html {
 }
 
 /* ==========
-  3.2 SECTION SHOPS
-  ========== */
+3.2 SECTION SHOPS
+========== */
 .section_shops .section__content {
   display: flex;
   flex-direction: row;
@@ -247,13 +247,13 @@ html {
 }
 
 /* ==========
-  3.3 SECTION MAP
-  ========== */
+3.3 SECTION MAP
+========== */
 .section_map .section__content {
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-content: center;
-  overflow: hidden;
   height: 50vh;
 }
 
@@ -327,4 +327,48 @@ html {
   grid-row: 6 / 9;
 
   background-color: var(--color-neon-3);
+}
+
+/* ==========
+4. FOOTER
+========== */
+.footer {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 15rem;
+  padding: 1rem;
+
+  backdrop-filter: blur(var(--blur-elements));
+}
+
+.footer__desc {
+  font-size: 4rem;
+  text-align: center;
+  word-spacing: 2rem;
+}
+
+.footer__signature {
+  font-size: 4rem;
+  font-weight: bolder;
+  letter-spacing: 0.5rem;
+  color: transparent;
+  
+  background: linear-gradient(rgba(0,255,255,1) 0%, rgba(253,190,246,1) 50%, rgba(204,57,199,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: none;
+  filter: drop-shadow(0 0 2px black);
+}
+
+.footer__link {
+  font-size: 4rem;
+  font-style: normal;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+}
+
+.fa-brands,
+.fa-solid {
+  font-size: 3rem;
+  padding-right: 1rem;
 }
