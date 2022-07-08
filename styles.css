@@ -92,6 +92,7 @@ html {
   align-content: center;
   width: 100vw;
   height: 16rem;
+  padding: 2rem;
 
   backdrop-filter: blur(var(--blur-elements));
 }
@@ -122,8 +123,8 @@ html {
 .logo {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   align-content: center;
+  align-items: center;
   justify-content: center;
   width: auto;
   height: 50%;
@@ -194,7 +195,7 @@ html {
 .section_home .section__video {
   aspect-ratio: 16 / 9;
   width: 100%;
-  max-width: 560px;
+  max-width: 800px;
   height: auto;
 
   border: none;
@@ -332,10 +333,10 @@ html {
 4. FOOTER
 ========== */
 .footer {
-  overflow: hidden;
   width: 100%;
   margin-top: 15rem;
   padding: 1rem;
+  text-align: center;
 
   backdrop-filter: blur(var(--blur-elements));
 }
@@ -360,10 +361,20 @@ html {
 }
 
 .footer__link {
+  color: var(--color-neon-2);
   font-size: 4rem;
   font-style: normal;
   text-decoration: none;
   letter-spacing: 0.3rem;
+}
+
+.footer__link:hover,
+.footer__link:focus {
+  color: var(--color-neon-3);
+}
+
+.footer__link:active {
+  filter: drop-shadow(0 0 5px var(--color-neon-1));
 }
 
 .fa-brands,
@@ -377,7 +388,7 @@ html {
 ========== */
 @media screen and (min-width: 426px) {
   .logo__img {
-    max-height: 80%;
+    height: 80%;
     display: inline-block;
     align-self: center;
     filter: drop-shadow(0 0 2px var(--color-neon-6));
@@ -397,7 +408,12 @@ html {
   }
 
   .logo {
-    width: 45%;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .logo__img {
+    height: 150%;
   }
 
   .nav__link {
@@ -424,6 +440,26 @@ html {
 @media screen and (min-width: 1001px) {
   .card {
     width: 29rem;
+  }
+
+  .section_home .section__content {
+    margin-top: 15rem;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .footer__desc {
+    padding-left: 2rem;
+  }
+
+  .footer__link {
+    padding: 0 2rem;
   }
 }
 
