@@ -426,3 +426,9 @@ html {
     width: 29rem;
   }
 }
+
+@media screen and (min-height: 750px) and (min-width: 1001px) {
+  .section_home {
+    height: 100vh;
+  }
+}
